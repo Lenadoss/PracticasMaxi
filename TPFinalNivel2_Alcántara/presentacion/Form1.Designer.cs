@@ -44,10 +44,12 @@
             this.lblCriterio = new System.Windows.Forms.Label();
             this.cbBoxCriterio = new System.Windows.Forms.ComboBox();
             this.cbBoxCampo = new System.Windows.Forms.ComboBox();
+            this.pcBoxArticulo = new System.Windows.Forms.PictureBox();
             this.BarraNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.GroupBData.SuspendLayout();
             this.GroupBFiltroAvanzado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcBoxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraNavegacion
@@ -60,7 +62,7 @@
             this.EliminarMenu});
             this.BarraNavegacion.Location = new System.Drawing.Point(0, 0);
             this.BarraNavegacion.Name = "BarraNavegacion";
-            this.BarraNavegacion.Size = new System.Drawing.Size(734, 24);
+            this.BarraNavegacion.Size = new System.Drawing.Size(966, 24);
             this.BarraNavegacion.TabIndex = 0;
             this.BarraNavegacion.Text = "menuStrip1";
             // 
@@ -97,21 +99,22 @@
             this.dgvListado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListado.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvListado.Location = new System.Drawing.Point(24, 52);
+            this.dgvListado.Location = new System.Drawing.Point(6, 53);
             this.dgvListado.Name = "dgvListado";
-            this.dgvListado.Size = new System.Drawing.Size(652, 312);
+            this.dgvListado.Size = new System.Drawing.Size(652, 261);
             this.dgvListado.TabIndex = 1;
             // 
             // GroupBData
             // 
             this.GroupBData.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.GroupBData.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GroupBData.Controls.Add(this.pcBoxArticulo);
             this.GroupBData.Controls.Add(this.txtFiltroRapido);
             this.GroupBData.Controls.Add(this.lblFiltroRapido);
             this.GroupBData.Controls.Add(this.dgvListado);
             this.GroupBData.Location = new System.Drawing.Point(12, 27);
             this.GroupBData.Name = "GroupBData";
-            this.GroupBData.Size = new System.Drawing.Size(697, 371);
+            this.GroupBData.Size = new System.Drawing.Size(942, 329);
             this.GroupBData.TabIndex = 2;
             this.GroupBData.TabStop = false;
             this.GroupBData.Text = "Listado de artículos";
@@ -119,15 +122,15 @@
             // txtFiltroRapido
             // 
             this.txtFiltroRapido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFiltroRapido.Location = new System.Drawing.Point(472, 19);
+            this.txtFiltroRapido.Location = new System.Drawing.Point(376, 19);
             this.txtFiltroRapido.Name = "txtFiltroRapido";
-            this.txtFiltroRapido.Size = new System.Drawing.Size(204, 20);
+            this.txtFiltroRapido.Size = new System.Drawing.Size(279, 20);
             this.txtFiltroRapido.TabIndex = 4;
             // 
             // lblFiltroRapido
             // 
             this.lblFiltroRapido.AutoSize = true;
-            this.lblFiltroRapido.Location = new System.Drawing.Point(405, 22);
+            this.lblFiltroRapido.Location = new System.Drawing.Point(309, 22);
             this.lblFiltroRapido.Name = "lblFiltroRapido";
             this.lblFiltroRapido.Size = new System.Drawing.Size(61, 13);
             this.lblFiltroRapido.TabIndex = 3;
@@ -152,7 +155,7 @@
             this.GroupBFiltroAvanzado.Controls.Add(this.cbBoxCriterio);
             this.GroupBFiltroAvanzado.Controls.Add(this.cbBoxCampo);
             this.GroupBFiltroAvanzado.Controls.Add(this.lblCampo);
-            this.GroupBFiltroAvanzado.Location = new System.Drawing.Point(12, 404);
+            this.GroupBFiltroAvanzado.Location = new System.Drawing.Point(12, 362);
             this.GroupBFiltroAvanzado.Name = "GroupBFiltroAvanzado";
             this.GroupBFiltroAvanzado.Size = new System.Drawing.Size(697, 65);
             this.GroupBFiltroAvanzado.TabIndex = 6;
@@ -203,11 +206,19 @@
             this.cbBoxCampo.Size = new System.Drawing.Size(100, 21);
             this.cbBoxCampo.TabIndex = 4;
             // 
+            // pcBoxArticulo
+            // 
+            this.pcBoxArticulo.Location = new System.Drawing.Point(664, 53);
+            this.pcBoxArticulo.Name = "pcBoxArticulo";
+            this.pcBoxArticulo.Size = new System.Drawing.Size(272, 261);
+            this.pcBoxArticulo.TabIndex = 5;
+            this.pcBoxArticulo.TabStop = false;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 471);
+            this.ClientSize = new System.Drawing.Size(966, 431);
             this.Controls.Add(this.GroupBData);
             this.Controls.Add(this.BarraNavegacion);
             this.Controls.Add(this.GroupBFiltroAvanzado);
@@ -223,6 +234,7 @@
             this.GroupBData.PerformLayout();
             this.GroupBFiltroAvanzado.ResumeLayout(false);
             this.GroupBFiltroAvanzado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcBoxArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,6 +258,7 @@
         private System.Windows.Forms.ComboBox cbBoxCampo;
         private System.Windows.Forms.TextBox txtFiltroAvanzado;
         private System.Windows.Forms.Label lblFiltro;
+        private System.Windows.Forms.PictureBox pcBoxArticulo;
     }
 }
 

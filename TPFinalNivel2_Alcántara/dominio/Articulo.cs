@@ -10,7 +10,7 @@ namespace dominio
     public class Articulo
     {
         [DisplayName("Código")]
-        public int Codigo { get; set; }
+        public string Codigo { get; set; }
         public string Nombre { get; set; }
         [DisplayName("Descripción")]
         public string Descripcion { get; set; }
@@ -18,6 +18,6 @@ namespace dominio
         [DisplayName("Categoría")]
         public string Categoria { get; set; }
         public string Imagen { get; set; }
-        public double Precio { get; set; }
+        public decimal Precio { get; set; }
     }
 }

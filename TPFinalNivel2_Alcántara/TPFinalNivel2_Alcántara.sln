@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35521.163 d17.12
+VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "presentacion\Presentacion.csproj", "{1436CD53-074D-44C0-A420-8172D748B25B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "dominio\Dominio.csproj", "{F6CF456E-74B4-460D-9B10-6F827451D788}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{EBE4CDBA-1829-4484-A20B-D34D22022C4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Dataa\Data.csproj", "{142AF36F-888B-40DA-A00E-32F272C5AE0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{EBE4CDBA-1829-4484-A20B-D34D22022C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBE4CDBA-1829-4484-A20B-D34D22022C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBE4CDBA-1829-4484-A20B-D34D22022C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{142AF36F-888B-40DA-A00E-32F272C5AE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142AF36F-888B-40DA-A00E-32F272C5AE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142AF36F-888B-40DA-A00E-32F272C5AE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142AF36F-888B-40DA-A00E-32F272C5AE0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
