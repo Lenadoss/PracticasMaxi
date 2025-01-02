@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormDetalle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormDetalle.Designer.cs">
+      <DependentUpon>FormDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAgregar.cs">
       <SubType>Form</SubType>
@@ -60,8 +66,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormDetalle.resx">
+      <DependentUpon>FormDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAgregar.resx">
       <DependentUpon>FormAgregar.cs</DependentUpon>
@@ -89,6 +98,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Dataa\Data.csproj">
+      <Project>{142AF36F-888B-40DA-A00E-32F272C5AE0D}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\dominio\Dominio.csproj">
       <Project>{f6cf456e-74b4-460d-9b10-6f827451d788}</Project>
       <Name>Dominio</Name>

@@ -46,10 +46,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.pBoxArticuloAgregar = new System.Windows.Forms.PictureBox();
+            this.p = new System.Windows.Forms.PictureBox();
             this.gBoxAgregar.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBoxArticuloAgregar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -67,6 +67,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(147, 21);
             this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // txtNombre
             // 
@@ -74,6 +75,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(147, 21);
             this.txtNombre.TabIndex = 3;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lblNombre
             // 
@@ -90,6 +92,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(147, 21);
             this.txtDescripcion.TabIndex = 5;
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // lblDescripcion
             // 
@@ -142,6 +145,7 @@
             this.txtImagen.Name = "txtImagen";
             this.txtImagen.Size = new System.Drawing.Size(147, 21);
             this.txtImagen.TabIndex = 12;
+            this.txtImagen.Leave += new System.EventHandler(this.txtImagen_Leave);
             // 
             // lblImagen
             // 
@@ -158,6 +162,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(147, 21);
             this.txtPrecio.TabIndex = 14;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // lblPrecio
             // 
@@ -212,6 +217,7 @@
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAgregar
             // 
@@ -221,21 +227,22 @@
             this.btnAgregar.TabIndex = 15;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // pBoxArticuloAgregar
+            // p
             // 
-            this.pBoxArticuloAgregar.Location = new System.Drawing.Point(311, 49);
-            this.pBoxArticuloAgregar.Name = "pBoxArticuloAgregar";
-            this.pBoxArticuloAgregar.Size = new System.Drawing.Size(259, 245);
-            this.pBoxArticuloAgregar.TabIndex = 16;
-            this.pBoxArticuloAgregar.TabStop = false;
+            this.p.Location = new System.Drawing.Point(311, 49);
+            this.p.Name = "p";
+            this.p.Size = new System.Drawing.Size(259, 245);
+            this.p.TabIndex = 16;
+            this.p.TabStop = false;
             // 
             // FormAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 343);
-            this.Controls.Add(this.pBoxArticuloAgregar);
+            this.Controls.Add(this.p);
             this.Controls.Add(this.gBoxAgregar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -243,10 +250,11 @@
             this.Name = "FormAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar";
+            this.Load += new System.EventHandler(this.FormAgregar_Load);
             this.gBoxAgregar.ResumeLayout(false);
             this.gBoxAgregar.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pBoxArticuloAgregar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,6 +279,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.PictureBox pBoxArticuloAgregar;
+        private System.Windows.Forms.PictureBox p;
     }
 }

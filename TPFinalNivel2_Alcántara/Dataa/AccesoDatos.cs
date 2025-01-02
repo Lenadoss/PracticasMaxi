@@ -12,7 +12,6 @@ namespace Data
         private SqlConnection Conexion = new SqlConnection();
         private SqlCommand Comando = new SqlCommand();
         private SqlDataReader Lector;
-    
         public void CrearConexion()
         {
             try
@@ -51,6 +50,18 @@ namespace Data
             }
         }
 
+        public void SetearParametro(string nombre, object valor)
+        {
+            // Verificar si el parámetro ya existe y eliminarlo si es necesario
+            if (Comando.Parameters.Contains(nombre))
+            {
+                Comando.Parameters.RemoveAt(Comando.Parameters.IndexOf(nombre));
+            }
+
+            // Ahora agregar el parámetro
+            Comando.Parameters.AddWithValue(nombre, valor);
+        }
+
         public SqlDataReader LeerConsulta()
         {
             Comando.Connection = Conexion;
@@ -74,6 +85,18 @@ namespace Data
                 Conexion.Close();
             }
             catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void EjecutarAccion()
+        {
+            try
+            {
+                Comando.ExecuteNonQuery();
+            }
+            catch(Exception ex)
             {
                 throw ex;
             }
