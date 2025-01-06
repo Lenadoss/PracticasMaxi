@@ -14,6 +14,7 @@ namespace presentacion
 {
     public partial class FormPrincipal : Form
     {
+        private List<Articulo> lista = new List<Articulo>();
         ArticuloNegocio Negocio = new ArticuloNegocio();
         public FormPrincipal()
         {
@@ -24,8 +25,9 @@ namespace presentacion
         {
             try
             {
+                lista = Negocio.CargarListaBD();
                 dgvListado.DataSource = null;
-                dgvListado.DataSource = Negocio.CargarListaBD(); // Asignar el nuevo DataSource
+                dgvListado.DataSource = lista; // Asignar el nuevo DataSource
                 OcultarColumnas();
             }
             catch (Exception ex)
@@ -100,10 +102,9 @@ namespace presentacion
         {
             try
             {
-                var Lista = new List<Articulo>();
-                Lista = Negocio.CargarListaBD();
-                Lista = Lista.FindAll(x => x.Nombre.ToUpper().Contains(txtFiltroRapido.Text.ToUpper()));
-                dgvListado.DataSource = Lista;
+                List<Articulo> ListaFiltrada = new List<Articulo>();
+                ListaFiltrada = lista.FindAll(x => x.Nombre.ToUpper().Contains(txtFiltroRapido.Text.ToUpper()));
+                dgvListado.DataSource = ListaFiltrada;
             }
             catch (Exception ex)
             {
